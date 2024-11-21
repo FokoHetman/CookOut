@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "cookout:block/vial_rack" },
+    "facing=east": { "model": "cookout:block/vial_rack", "y": 90 },
+    "facing=south": { "model": "cookout:block/vial_rack", "y": 180 },
+    "facing=west": { "model": "cookout:block/vial_rack", "y": 270 }
+  }
+}
