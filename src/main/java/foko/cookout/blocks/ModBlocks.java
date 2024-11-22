@@ -15,7 +15,8 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
-
+//MOVED TO REGISTRIES
+    /*
     public static final Block VIAL_RACK = registerBlock("vial_rack", new VialRack(FabricBlockSettings.create().strength(4.0f).nonOpaque().luminance(4)));
     public static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -32,5 +33,5 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(Registries.ITEM_GROUP.getKey(), new Identifier(CookOut.MOD_ID, "lab_equipment"))).register(ModBlocks::creativeEntries);
     }
     public static void init() { }
-
+*/
 }

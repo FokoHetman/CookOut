@@ -1,6 +1,8 @@
 package foko.cookout;
 
 import foko.cookout.blocks.ModBlocks;
+import foko.cookout.registries.CookOutBlockEntities;
+import foko.cookout.registries.CookOutBlocks;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
@@ -22,7 +24,7 @@ public class CookOut implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	public static final ItemGroup LAB_EQUIPMENT = FabricItemGroup.builder()
-			.icon(() -> new ItemStack(ModBlocks.VIAL_RACK))
+			.icon(() -> new ItemStack(CookOutBlocks.VIAL_RACK))
 			.displayName(Text.translatable("itemGroup.cookout.lab_equipment"))
 			.entries((context, entries) -> {
 			})
@@ -32,9 +34,8 @@ public class CookOut implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
-
-		ModBlocks.init();
-		ModBlocks.registerBlockItems();
+		CookOutBlockEntities.registerEntities();
+		CookOutBlocks.registerBlocks();
 
 		Registry.register(Registries.ITEM_GROUP, new Identifier(MOD_ID, "lab_equipment"), LAB_EQUIPMENT);
 
