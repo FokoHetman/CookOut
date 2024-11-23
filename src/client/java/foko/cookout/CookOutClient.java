@@ -1,6 +1,5 @@
 package foko.cookout;
 
-import foko.cookout.blocks.ModBlocks;
 import foko.cookout.registries.CookOutBlocks;
 import foko.cookout.renderers.Renderers;
 import net.fabricmc.api.ClientModInitializer;

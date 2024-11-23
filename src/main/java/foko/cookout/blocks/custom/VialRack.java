@@ -48,10 +48,10 @@ public class VialRack extends BlockWithEntity {
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext ctx) {
         switch (state.get(FACING)) {
             case EAST, WEST -> {
-                return VoxelShapes.cuboid(0.1875f, 0f, 0.0625f, 0.8125f, 0.5f, 0.9375f);
+                return VoxelShapes.cuboid(0.25f, 0f, 0.0625f, 0.75f, 0.8125f, 0.9375f);
             }
             default -> {
-                return VoxelShapes.cuboid(0.0625f, 0f, 0.1875f, 0.9375f, 0.5f, 0.8125f);
+                return VoxelShapes.cuboid(0.0625f, 0f, 0.25f, 0.9375f, 0.8125f, 0.75f);
             }
 
         }
